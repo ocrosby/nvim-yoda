@@ -1,0 +1,22 @@
+-- lua/plugins/overrides.lua
+-- Your own plugins, and overrides of yoda's.
+--
+-- lazy.nvim merges any spec here with the one yoda declares for the same
+-- plugin, so you can change a single option without copying yoda's whole
+-- spec. Note that `config` is REPLACED rather than merged — if yoda's spec
+-- uses `config` and you supply your own, yours wins entirely.
+--
+-- Examples:
+--
+--   return {
+--     -- Override one option on a plugin yoda already ships
+--     { "folke/tokyonight.nvim", opts = { style = "moon" } },
+--
+--     -- Add a plugin of your own
+--     { "tpope/vim-fugitive", cmd = "Git" },
+--
+--     -- Disable something yoda ships
+--     { "nvzone/showkeys", enabled = false },
+--   }
+
+return {}

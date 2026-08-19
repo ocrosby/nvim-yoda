@@ -1,0 +1,6 @@
+# Local machine overrides, never tracked
+/lua/local.lua
+
+# Neovim state that may land here if $XDG dirs are unset
+/.luarc.json
+*.log
