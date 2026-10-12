@@ -59,4 +59,8 @@ return {
   { import = "yoda.extras.lang.node" },
   { import = "yoda.extras.lang.python" },
   { import = "yoda.extras.lang.rust" },
+  { import = "yoda.extras.lang.web" },
+  { import = "yoda.extras.lang.shell" },
+  { import = "yoda.extras.lang.sql" },
+  { import = "yoda.extras.lang.clang" },
 }
