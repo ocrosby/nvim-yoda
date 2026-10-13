@@ -39,6 +39,10 @@ return {
     version = "*",
     ft = { "c", "cpp", "cxx", "objcpp", "rust", "go" },
     cmd = "Asm",
-    opts = {},
+    opts = {
+      compilers = {
+        c = { cmd = "cc", extra_args = { "-include", "stdio.h" } },
+      },
+    },
   },
 }
