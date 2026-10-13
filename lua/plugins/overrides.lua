@@ -21,13 +21,14 @@
 
 return {
   -- asmview.nvim — compile the function at the cursor to assembly in a
-  -- floating window. Supports C, C++, Rust, and Go via each toolchain's
-  -- native `-S` / `--emit=asm` / `go build -gcflags=-S` path.
+  -- right-side vsplit, with the asm lines for the current source line
+  -- highlighted as you navigate. Supports C, C++, Rust, and Go via each
+  -- toolchain's native `-S` / `--emit=asm` / `go build -gcflags=-S` path.
   --
-  -- Pinned to v0.2.0 so an unannounced change on main doesn't fan out
-  -- on :Lazy sync. Lazy-loaded on the four supported filetypes and on
-  -- `:Asm` — users on an unsupported filetype who want to peek can
-  -- still invoke the command.
+  -- `version = "*"` tracks the latest semver tag so :Lazy sync picks up
+  -- published releases without pulling every unreleased commit on main.
+  -- Lazy-loaded on the four supported filetypes and on `:Asm` — users on
+  -- an unsupported filetype who want to peek can still invoke the command.
   --
   -- No <leader> key is claimed here — yoda's AI group owns `<leader>a`
   -- (lua/yoda/plugins/ai.lua) and I'd rather bind `<Plug>(AsmView)` to
@@ -35,7 +36,7 @@ return {
   -- shortcut for a niche tool.
   {
     "jedi-knights/asmview.nvim",
-    tag = "v0.2.0",
+    version = "*",
     ft = { "c", "cpp", "cxx", "objcpp", "rust", "go" },
     cmd = "Asm",
     opts = {},
