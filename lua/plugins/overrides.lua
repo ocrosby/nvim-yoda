@@ -38,6 +38,10 @@ return {
     tag = "v0.2.0",
     ft = { "c", "cpp", "cxx", "objcpp", "rust", "go" },
     cmd = "Asm",
-    opts = {},
+    opts = {
+      compilers = {
+        c = { cmd = "cc", extra_args = { "-include", "stdio.h" } },
+      },
+    },
   },
 }
